@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Add blog</title>
@@ -17,8 +17,8 @@
 </head>
 <body>
 	<div>
-		<form action="/spring-web/api/blog/addblogSpring" method="post">
-			 <p>BlogTitle: <input type="text" name="blogTitle" /></p>
+		<form action="/spring-web/api/blog/addblog" method="post">
+			<p>BlogTitle: <input type="text" name="blogTitle" /></p>
              <p>BlogContent: <input type="text" name="blogContent" /></p>
            <input type="submit" value="Submit" />
 		</form>

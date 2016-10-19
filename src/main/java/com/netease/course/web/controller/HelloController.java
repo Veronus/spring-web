@@ -37,7 +37,7 @@ public class HelloController {
 		return "user";
 	}
 	
-	@RequestMapping("/users/getHtml")
+	/*@RequestMapping("/users/getHtml")
 	public String getHtml(@RequestParam("return")String retHtml,ModelMap map) throws IOException{
 		TestUser testUser = new TestUser();
 		List<User> users = testUser.getUsers();
@@ -57,10 +57,10 @@ public class HelloController {
 		}
 		
 		return retHtml;
-	}
+	}*/
 	
 	
-	@RequestMapping("/users/getJson")
+	/*@RequestMapping("/users/getJson")
 	public String getJson(ModelMap map,String json) throws IOException{
 		TestUser testUser = new TestUser();
 		List<User> users = testUser.getUsers();
@@ -83,5 +83,5 @@ public class HelloController {
 		}
 		json ="";
 		return json;
-	}
+	}*/
 }

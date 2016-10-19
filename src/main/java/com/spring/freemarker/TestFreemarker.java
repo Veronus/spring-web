@@ -47,7 +47,7 @@ public class TestFreemarker {
 		
 		map.addAttribute("users", users);
 		for (User user : users) {
-			System.out.println(user.getUserid()+user.getUsername());
+			System.out.println(user.getUserName()+user.getUserPassword());
 		}
 		
 		((ConfigurableApplicationContext) context).close();

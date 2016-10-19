@@ -20,7 +20,7 @@ public class Test {
 
 	public static void main(String[] args) throws IOException, TemplateException {
 		
-		Configuration cfg = new Configuration(Configuration.VERSION_2_3_22);
+		/*Configuration cfg = new Configuration(Configuration.VERSION_2_3_22);
 		cfg.setDirectoryForTemplateLoading(
 				new File("E:\\NeonWorkspace\\spring-web\\src\\main\\webapp\\WEB-INF\\freemarker"));
 		cfg.setDefaultEncoding("UTF-8");
@@ -37,7 +37,7 @@ public class Test {
 			root.put("name", user.getUsername());
 		}
 		
-		System.out.println(testUser.getUsers().get(4).getUserid());
+		System.out.println(testUser.getUsers().get(4).getUserid());*/
 		
 	}
 

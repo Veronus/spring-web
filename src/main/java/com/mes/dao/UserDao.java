@@ -18,23 +18,18 @@ public interface UserDao {
 	@Update("create table user (userid int, username varchar(50))")
 	public void creatTable();
 	
-	@Results({ @Result(property = "userid", column = "userid"), 
-		   @Result(property = "username", column = "username") })
-	@Select("insert into user values(#{userid},#{username})")
-	public void insertUser(@Param("userid")int userid,@Param("username")String username);
+	@Results({ @Result(property = "userName", column = "userName"), 
+		   @Result(property = "userPassword", column = "userPassword") })
+	@Select("insert into user(userName,userPassword) values(#{userName},#{userPassword})")
+	public void insertUser(@Param("userName")String userName,@Param("userPassword")String userPassword);
 	
-	@Results({ @Result(property = "userid", column = "userid"), 
-		   @Result(property = "username", column = "username") })
-	@Update("update user set username = #{username} where userid = #{userid}")
-	public void updateUser(@Param("userid")int userid,@Param("username")String username);
-	
-	@Results({ @Result(property = "userid", column = "userid"), 
-		   @Result(property = "username", column = "username") })
+	@Results({ @Result(property = "userName", column = "userName"), 
+		   @Result(property = "userPassword", column = "userPassword") })
 	@Delete("Delete from user where userid = #{userid}")
 	public void DeleteUser(@Param("userid")int userid);
 	
-	@Results({ @Result(property = "userid", column = "userid"), 
-			   @Result(property = "username", column = "username") })
+	@Results({ @Result(property = "userName", column = "userName"), 
+		   @Result(property = "userPassword", column = "userPassword") })
 	@Select("select * from user")
 	public List<User> getUserList();
 }

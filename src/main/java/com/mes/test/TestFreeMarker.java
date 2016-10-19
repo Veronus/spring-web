@@ -35,8 +35,8 @@ public class TestFreeMarker {
 		Map<String, Object> root = new HashMap<String, Object>();
 		
 		for (User user : users) {
-			root.put("userid", user.getUserid());
-			root.put("username", user.getUsername());
+
+			root.put("username", user.getUserName());
 		}
 		
 		System.out.println(root);

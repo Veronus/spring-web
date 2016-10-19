@@ -20,23 +20,13 @@ import com.mes.meta.User;
 public class TestUser {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		ApplicationContext context = new ClassPathXmlApplicationContext("app.xml");
-		UserDao userDao = context.getBean("userDao", UserDao.class);
-/*		//userDao.creatTable();
-		userDao.insertUser(1001,"Veronus");
-		userDao.insertUser(1002,"Love caven");
-		userDao.insertUser(1003,"Joe");*/
-		List<User> users = userDao.getUserList();
-		
-		System.out.println("_____________________________");
-		System.out.println("________"+users+"______________");
-		System.out.println("_____________________________");
-		
-		for (User user : users) {
-			System.out.println(user.getUserid()+" name is: "+user.getUsername());
+		TestUser testUser = new TestUser();
+		testUser.check("test1", "test1");
+		if (testUser.check("test1", "test1")) {
+			System.out.println("login");
+		} else {
+			System.out.println("username or password error");
 		}
-		((ConfigurableApplicationContext) context).close();
 
 	}
 	
@@ -47,6 +37,23 @@ public class TestUser {
 		((ConfigurableApplicationContext) context).close();
 		return users;
 	}
+	
+	public boolean check(String userName, String userPassword) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("app.xml");
+		UserDao userDao = context.getBean("userDao", UserDao.class);
+		List<User> users = userDao.getUserList();
+		boolean tag = false;
+		for (User user : users) {
+			if (user.getUserName().equals(userName)  && user.getUserPassword().equals(userPassword)) {
+				tag = true;
+			}
+		}
+		((ConfigurableApplicationContext) context).close();
+		
+		return tag;
+	}
+	
+	
 	
 /*	@RequestMapping("/user/getHtml")
 	public List<User> getHtml(ModelMap map) throws IOException{

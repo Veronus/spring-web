@@ -5,7 +5,8 @@
 	version="2.5">
 	<display-name>spring-web</display-name>
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
+		<!-- <welcome-file>login.html</welcome-file> -->
+		<welcome-file>addblog.html</welcome-file>
 	</welcome-file-list>
 
 	<context-param>

@@ -1,31 +1,28 @@
 package com.mes.meta;
 
 public class User {
-	private int userid;
-	private String username;
+	
+	private String userName;
+	private String userPassword;
 	
 	public User() {
 		// TODO Auto-generated constructor stub
 	}
-	public User(int userid) {
+	public User(String userName) {
 		// TODO Auto-generated constructor stub
 	}
-	public User(int userid, String username) {
-		// TODO Auto-generated constructor stub
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getUserPassword() {
+		return userPassword;
+	}
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
 	}
 	
-	
-	public int getUserid() {
-		return userid;
-	}
-	public void setUserid(int userid) {
-		this.userid = userid;
-	}
-	public String getUsername() {
-		return username;
-	}
-	public void setUsername(String username) {
-		this.username = username;
-	}
 	
 }
